@@ -1,2 +1,2 @@
 # AgileTest
-for agile coyrse
+for agile course
