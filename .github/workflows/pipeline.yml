@@ -10,17 +10,15 @@ jobs:
     - uses: actions/checkout@v3
     - name: Setup Python environement
       uses: actions/setup-python@v3
-    - name: Install dependencies
+    - name: Install requirement 
       run: |
         python -m pip install --upgrade pip
-         # pip install pylint
     - name: pylint-and-format
         # You may pin to the exact commit or the version.
         # uses: itsvinayak/pylint-and-format@0a73b8e4fe81fd0ff59de0697a0b370ad989c462
       uses: itsvinayak/pylint-and-format@v1.1
       with:
-        # filename
-       filename: app.py
+        filename: "*.py"
     - name: Run unit tests
       run: |
         python -m unittest --verbose --failfast
