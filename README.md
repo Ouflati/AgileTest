@@ -1,4 +1,4 @@
-# Build status Badge ![](https://github.com/Ouflati/AgileTest/workflows/pipeline/badge.svg)
+# Build status Badge ![](https://github.com/Ouflati/AgileTest/actions/workflows/pipeline.yml/badge.svg)
 # Chapter 04_01
 
 - Create a repository on GitHub using the [New Repository](https://github.com/new) page.  Name it something that relates to the lesson like `exercise-files`.
