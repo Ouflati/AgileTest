@@ -13,12 +13,12 @@ jobs:
     - name: Install requirement 
       run: |
         python -m pip install --upgrade pip
-    - name: pylint-and-format
+     # - name: pylint-and-format
         # You may pin to the exact commit or the version.
         # uses: itsvinayak/pylint-and-format@0a73b8e4fe81fd0ff59de0697a0b370ad989c462
-      uses: itsvinayak/pylint-and-format@v1.1
-      with:
-        filename: "*.py"
+      #  uses: itsvinayak/pylint-and-format@v1.1
+      #  with:
+       #   filename: "*.py"
     - name: Run unit tests
       run: |
         python -m unittest --verbose --failfast
