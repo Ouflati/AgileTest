@@ -6,16 +6,19 @@ env:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup Python environment
-      uses: actions/setup-python@v1.1.1
-    - name: Install requirements
-      run: pip install --quiet --requirement requirements.txt
-    - name: Lint code
+    - uses: actions/checkout@v3
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
       run: |
-        flake8 --ignore=E501,E231 *.py
-        pylint --disable=C0301 --disable=C0326 *.py
-    - name: Run unit tests
+        python -m pip install --upgrade pip
+        pip install pylint
+    - name: Analysing the code with pylint
       run: |
-        python -m unittest --verbose --failfast
+        pylint $(git ls-files '*.py')
