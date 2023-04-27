@@ -16,6 +16,7 @@ jobs:
           path : .    
   use:
     runs-on: ubuntu-latest
+    needs : [main]
     steps:
       - name : checkout
         uses : actions/checkout@v3
