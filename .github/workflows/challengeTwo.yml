@@ -12,6 +12,6 @@ jobs:
       - name : upload artifact
         uses : actions/upload-artifact@v3
         with :
-          name : ${{ env.APPLICATION_NAME }}
+          name : ${{ env.ARTIFACT_NAME }}
           path : .
        
