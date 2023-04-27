@@ -13,8 +13,7 @@ jobs:
         uses : actions/upload-artifact@v3
         with :
           name : ${{ env.ARTIFACT_NAME }}
-          path : .
-       
+          path : .    
   use:
     runs-on: ubuntu-latest
     steps:
@@ -24,4 +23,3 @@ jobs:
         uses : actions/download-artifact@v2.1.1
         with :
           name : ${{ env.ARTIFACT_NAME }}
-          path: .
