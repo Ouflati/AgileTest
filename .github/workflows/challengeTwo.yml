@@ -10,7 +10,7 @@ jobs:
       - name : checkout
         uses : actions/checkout@v3
       - name : upload artifact
-        uses : actions/upload-artifact@v3
+        uses : actions/upload-artifact@v3.1.2
         with :
           name : ${{ env.ARTIFACT_NAME }}
           path : .    
