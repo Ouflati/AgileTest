@@ -15,3 +15,13 @@ jobs:
           name : ${{ env.ARTIFACT_NAME }}
           path : .
        
+  use:
+    runs-on: ubuntu-latest
+    steps:
+      - name : checkout
+        uses : actions/checkout@v3
+      - name : Download a Build Artifact
+        uses : actions/download-artifact@v2.1.1
+        with :
+          name : ${{ env.ARTIFACT_NAME }}
+          path: .
