@@ -5,13 +5,13 @@ name: ChallengeOne
 on: push
 
 jobs:
-  ubuntu:
+  ubuntu :
     runs-on: ubuntu-latest
     steps:
       - run: date
- windows
+  windows :
     runs-on: windows-latest
-    steps
+    steps :
       - run: date
   macos:
     runs-on: macos-latest
